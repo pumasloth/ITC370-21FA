@@ -1,0 +1,54 @@
+/*
+    Ethan Penrose
+    ITC 370
+    9/11/2021
+    https://css-tricks.com/couple-takes-sticky-footer
+*/
+a {
+    color: blue;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: mintcream;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    border: 5px solid #555;
+    width: 500px;
+}
+
+header {
+    background-color: lightblue;
+    text-align: center;
+    border: 2px solid;
+}
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+    flex-shrink: 0;
+    border: 2px solid;
+}
+
+.main-article {
+    flex: 1 0 auto;
+    text-align: left;
+    margin: 0;
+    padding: 5px;
+}
+
+nav {
+    text-align: center;
+}
+
+aside {
+    float: right;
+}

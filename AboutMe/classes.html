@@ -4,20 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <title>My Classes This Semester!</title>
 </head>
 
 <body>
-    <h2>Classes I'm taking this semester!</h2>
-    <nav>
+    <header>
+        <h2>Classes I'm taking this semester!</h2>
+    </header>
+    <nav title="My navigation menu">
         <a href="index.html">Home</a> | <a href="hobbies.html">Hobbies</a> | <a href="classes.html">Classes</a> | <a href="http://slothwx.com">Weather</a>
     </nav>
-    <ul>
-        <li>ITC 370 - Introduction to Web Development</li>
-        <li>ITC 560 - Fundamentals of Cybersecurity</li>
-        <li>MGT 487 - Strategic Management and Policy</li>
-    </ul>
-    <img src="../images/classes.jpg" alt="Index from a textbook" width="500">
+    <article class="main-article">
+        <h2>Classes to enjoy</h2>
+        <aside title="My classes">
+            <img src="../images/classes.jpg" alt="Index from a textbook">
+        </aside>
+        <ul>
+            <li>ITC 370 - Introduction to Web Development</li>
+            <li>ITC 560 - Fundamentals of Cybersecurity</li>
+            <li>MGT 487 - Strategic Management and Policy</li>
+        </ul>
+    </article>
+    <footer>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ethan Penrose - ITC 370</p>
+    </footer>
 </body>
 
 </html>
