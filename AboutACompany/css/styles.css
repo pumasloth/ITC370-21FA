@@ -1,0 +1,115 @@
+/*
+    Ethan Penrose
+    ITC 370
+    9/20/2021
+    About a Company
+*/
+
+/*
+  Reset CSS
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+body {
+  background-color: mintcream;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*
+    Flexbox
+    https://css-tricks.com/couple-takes-sticky-footer/#there-is-flexbox
+  */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+/*
+  https://www.w3schools.com/howto/howto_js_image_grid.asp
+*/
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+header {
+    background-color: lightblue;
+    text-align: center;
+    border: 2px solid;
+}
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+    flex-shrink: 0;
+    border: 2px solid;
+}
+
+.border {
+  border: 3px solid orange;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+/*
+  Navigation menu
+  https://www.w3schools.com/css/css_navbar_horizontal.asp
+*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+nav li a:hover {
+  background-color: lightcoral;
+}
