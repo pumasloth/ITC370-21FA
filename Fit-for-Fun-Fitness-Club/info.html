@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--
+        Ethan Penrose
+        ITC 370
+        10/01/2021
+        Fit for Fun Fitness Club
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Fit for Fun Fitness Club</title>
+</head>
+
+<body>
+    <header>
+        <h2>Fit for Fun Fitness Club</h2>
+        <p>Let's get fit and have fun doing it!</p>
+    </header>
+    <nav title="My navigation menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="info.html">Information</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <form action="thankyou.html" method="GET">
+            <fieldset>
+                <h1>Sign up for a class</h1>
+                <div class="row">
+                    <div class="item">
+                        <label for="first_name">First Name*</label>
+                        <input type="text" id="first_name" name="firstname" placeholder="First name" required style="width: 250px;">
+                        <label for="last_name">Last Name*</label>
+                        <input type="text" id="last_name" name="lastname" placeholder="Last name" required style="width: 250px;">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" style="width: 250px;">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="417-555-7810" style="width: 250px;">
+                    </div>
+                    <div class="item">
+                        <label for="contact">Best way to reach you?</label>
+                        <div class="select-wrapper">
+                            <select id="contact" name="contact">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Pigeon">Pigeon</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>Classes offered</p>
+                        <hr>
+                        <input type="checkbox" id="class1" name="class1" value="Aerobics">
+                        <label for="class1">Aerobics</label>
+                        <input type="checkbox" id="class2" name="class2" value="Cycling">
+                        <label for="class2">Cycling</label>
+                        <input type="checkbox" id="class3" name="class3" value="Boxing">
+                        <label for="class3">Boxing</label>
+                        <input type="checkbox" id="class4" name="class4" value="Zumba">
+                        <label for="class4">Zumba</label>
+                    </div>
+                    <div class="item">
+                        <p>Prefered class time</p>
+                        <hr>
+                        <input type="radio" id="am" name="time" value="AM">
+                        <label for="am">AM</label>
+                        <input type="radio" id="pm" name="time" value="PM">
+                        <label for="pm">PM</label>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+                <br>
+                <sub>* required</sub>
+            </fieldset>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Ethan Penrose - ITC 370</p>
+    </footer>
+</body>
+
+</html>
