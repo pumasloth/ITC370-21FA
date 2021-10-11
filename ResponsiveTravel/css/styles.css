@@ -1,0 +1,163 @@
+/*
+    Ethan Penrose
+    ITC 370
+    10/9/2021
+    Responsive Travel
+*/
+
+/*
+  Reset CSS
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      margin: 0;
+}
+  
+body {
+    background-color: mintcream;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+  
+    /*
+      Flexbox
+      https://css-tricks.com/couple-takes-sticky-footer/#there-is-flexbox
+    */
+    display: flex;
+    flex-direction: column;
+}
+  
+.content {
+    flex: 1 0 auto;
+}
+  
+/*
+    https://www.w3schools.com/howto/howto_js_image_grid.asp
+*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+.column {
+    flex: 33%;
+    padding: 0 4px;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+  
+header {
+      background-color: lightblue;
+      text-align: center;
+      border: 2px solid;
+}
+  
+footer {
+      background-color: lightblue;
+      text-align: center;
+      flex-shrink: 0;
+      border: 2px solid;
+}
+  
+.border {
+    border: 3px solid orange;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.center {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-block {
+    background-color: black;
+    color: white;
+}
+
+/*
+Navigation menu
+https://www.w3schools.com/css/css_navbar_horizontal.asp
+*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+nav a {
+    color: white;
+    background: #333;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    text-decoration: none;
+}
+  
+/* Change the link on hover */
+nav a:hover {
+    background: darkgrey;
+}
+
+p {
+    font-size: small;
+}
+
+@media (min-width: 480px) {
+    nav ul {
+        display: flex;
+    }
+    
+    nav li {
+        flex: 1 1 auto;
+    }
+
+    p {
+        font-size: large;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    nav a {
+        font-size: 20px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+    
+    nav li {
+        flex: 1 1 auto;
+    }
+
+    p {
+        font-size: large;
+    }
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
