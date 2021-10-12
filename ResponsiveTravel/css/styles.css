@@ -39,36 +39,17 @@ body {
     flex: 1 0 auto;
 }
   
-/*
-    https://www.w3schools.com/howto/howto_js_image_grid.asp
-*/
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-  
-.column {
-    flex: 33%;
-    padding: 0 4px;
-}
-  
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-  
 header {
-      background-color: lightblue;
-      text-align: center;
-      border: 2px solid;
+    background-color: lightblue;
+    text-align: center;
+    border: 2px solid;
 }
   
 footer {
-      background-color: lightblue;
-      text-align: center;
-      flex-shrink: 0;
-      border: 2px solid;
+    background-color: lightblue;
+    text-align: center;
+    flex-shrink: 0;
+    border: 2px solid;
 }
   
 .border {
@@ -91,7 +72,12 @@ footer {
 
 .text-block {
     background-color: black;
-    color: white;
+    color: #40ff00;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
 }
 
 /*
@@ -121,8 +107,15 @@ nav a:hover {
     background: darkgrey;
 }
 
-p {
-    font-size: small;
+img {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+@media only screen and (max-width: 479px) {
+    p, .text-block {
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 480px) {
@@ -151,13 +144,4 @@ p {
     nav li {
         flex: 1 1 auto;
     }
-
-    p {
-        font-size: large;
-    }
-}
-
-.responsive {
-    max-width: 100%;
-    height: auto;
 }
