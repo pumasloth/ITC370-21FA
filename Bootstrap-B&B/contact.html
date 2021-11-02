@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+        Ethan Penrose
+        ITC 370
+        10/30/2021
+        Bootstrap Bed & Breakfast
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Kailua Kove Bed & Breakfast</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Plumeria Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Maile Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container heading">
+      <h1 class="display-1">Contact Us</h1>
+      <p>
+        For booking or reservation requests, please email us & provide the number of nights you wish to stay & your check
+        out day & date along with any questions you may have. Phone numbers are requested in case of any email address errors
+        for us to be able to reply promptly to you.
+      </p>
+      <div class="row">
+        <form class="col">
+          <div class="col">
+            <div class="col">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="First name">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last name">
+              <label for="inputEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <label for="inputPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="inputPhone" placeholder="Phone">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Get Rates and Availability</button>
+          </div>
+        </form>
+        <div class="col">
+          <p>
+            Address: 804 Mokapu Road, Kailua, HI 96734
+            <br>
+            Eamil: <a href="mailto:paradisepalmbnb@gmail.com">paradisepalmbnb@gmail.com</a>
+            <br>
+            Phone: <a href="tel:1808-261-1431">808-261-1431</a>
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.185087411385!2d-157.74923348506073!3d21.421968785786643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c0015399eb53f0b%3A0xf8b93ccbb6bb3ebe!2s804%20Mokapu%20Rd%2C%20Kailua%2C%20HI%2096734!5e0!3m2!1sen!2sus!4v1635739985931!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Kailua Kove Bed & Breakfast</p>
+      <p>
+      Address: 804 Mokapu Road • Kailua HI 96734
+      |
+      Eamil: <a href="mailto:paradisepalmbnb@gmail.com">paradisepalmbnb@gmail.com</a>
+      |
+      Phone: <a href="tel:1808-261-1431">808-261-1431</a>
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

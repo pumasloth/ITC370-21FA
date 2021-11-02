@@ -1,0 +1,41 @@
+/*
+    Ethan Penrose
+    ITC 370
+    10/30/2021
+    Bootstrap Bed & Breakfast
+*/
+
+body {
+    background-color: #eeeeee;
+}
+
+.container {
+    background-color: white;
+    margin-top: 24px;
+}
+
+.heading {
+    box-shadow: 5px 5px 25px 8px grey;
+    padding: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+.card {
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: blue;
+}
+
+.navbar .active {
+    background-color: lightseagreen;
+}
+
+footer {
+    color: white;
+}
