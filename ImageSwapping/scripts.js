@@ -26,7 +26,7 @@ window.onload = function() {
     for (let index = 0; index < 4; index++) {
         setImage(imageArray[index], index);
     }
-}
+};
 
 function setImage(image, index) {
     if (index === 0) {
