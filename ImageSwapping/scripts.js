@@ -5,61 +5,71 @@
     Image Swapping
 */
 
-// Place all images into arrays.
-var imageArray1 = [
-    "images\\pexels-pixabay-53435.jpg",
-    "images\\pexels-guillaume-meurice-1591447.jpg",
-    "images\\pexels-kaique-rocha-775201.jpg",
-    "images\\pexels-pixabay-38537.jpg",
-    "images\\pexels-quang-nguyen-vinh-2166695.jpg"
+let useFirstSetOfImages = true;
+
+// Place all images into arrays, in groups of four (A and B).
+// 0-3 = A
+// 4-7 = B
+var imageArray = [
+    "images\\A-pexels-guillaume-meurice-1591447.jpg",
+    "images\\A-pexels-kaique-rocha-775201.jpg",
+    "images\\A-pexels-pixabay-38537.jpg",
+    "images\\A-pexels-sparsh-karki-2350074.jpg",
+    "images\\B-pexels-pixabay-36717.jpg",
+    "images\\B-pexels-pixabay-53435.jpg",
+    "images\\B-pexels-skitterphoto-9198.jpg",
+    "images\\B-pexels-sunil-patel-599708.jpg"
 ];
 
-var imageArray2 = [
-    "images\\pexels-pixabay-36717.jpg",
-    "images\\pexels-sunil-patel-599708.jpg",
-    "images\\pexels-skitterphoto-9198.jpg",
-    "images\\pexels-pixabay-56875.jpg",
-    "images\\pexels-sparsh-karki-2350074.jpg"
-];
-
-// Create a window load event that loads all the images
-// (from the array) onto the HTML page.
+// Load the first four images.
 window.onload = function() {
-    imageArray1.forEach(setImage);
+    for (let index = 0; index < 4; index++) {
+        setImage(imageArray[index], index);
+    }
 }
 
 function setImage(image, index) {
-    var img = document.createElement("img");
-    img.src = image;
-
     if (index === 0) {
-        // Display the first image full size.
-        img.style.width = "100%";
-        img.alt = "Enjoy one large image!";
-    } else {
-        img.width = "450";
-        img.height = "450";
-        img.alt = "Enjoy the dynamic thumbnail images!";
+        document.getElementById("largeImage").src = image;
     }
 
-    // Center the images.
-    img.style.margin = "0 auto";
-    img.style.marginTop = "10px";
-    img.style.marginBottom = "10px";
-    document.body.appendChild(img);
+    // Add one to offset starting at zero.
+    var thumbnailId = "thumbnail" + (index + 1);
+    document.getElementById(thumbnailId).src = image;
 }
 
-function changeImages() {
-    imageArray2.forEach(changeImage);
+// Swap all four images in the array based on group (A or B).
+function swapImages() {
+    if (useFirstSetOfImages) {
+        document.getElementById("thumbnail1").src = imageArray[4];
+        document.getElementById("thumbnail2").src = imageArray[5];
+        document.getElementById("thumbnail3").src = imageArray[6];
+        document.getElementById("thumbnail4").src = imageArray[7];
+        useFirstSetOfImages = false;
+    } else {
+        document.getElementById("thumbnail1").src = imageArray[0];
+        document.getElementById("thumbnail2").src = imageArray[1];
+        document.getElementById("thumbnail3").src = imageArray[2];
+        document.getElementById("thumbnail4").src = imageArray[3];
+        useFirstSetOfImages = true;
+    }
+
+    // Set the large image to the first thumbnail.
+    changeLargeImage(document.getElementById("thumbnail1"));
 }
 
-function changeImage(image) {
-    document.getElementById("img").src = image.src;
+function changeLargeImage(image) {
+    document.getElementById("largeImage").src = image.src;
 }
 
-var images = document.getElementsByTagName("img");
-for (let i = 0; i < images.length; i++) {
-    images[i].addEventListener("dblclick", function() {
-        changeImage(imageArray2[i]);
+// Create dynamic eventlisteners.
+document.getElementById("largeImage").addEventListener("dblclick", function() {
+    swapImages();
+});
+
+var thumbnails = document.getElementsByClassName("thumbnail");
+for (let index = 0; index < thumbnails.length; index++) {
+    thumbnails[index].addEventListener("click", function() {
+        changeLargeImage(this);
     });
 }

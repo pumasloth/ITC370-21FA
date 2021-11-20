@@ -94,3 +94,24 @@ button {
     text-transform:  uppercase;
     margin-right: 30px;
 }
+
+.thumbnail {
+    height: 250px;
+    width: 250px;
+}
+
+img {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.mainImage {
+    height: 450px;
+    width: 450px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
