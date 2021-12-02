@@ -25,7 +25,6 @@ function ChangeTrafficLightColor() {
         StartRace();
     } else if (trafficLightSrc === greenLight) {
         trafficLight.src = redLight;
-        trafficLight.innerHTML = "On your mark..."
         ResetRace();
     }
 }
