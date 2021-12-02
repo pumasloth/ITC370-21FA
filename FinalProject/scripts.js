@@ -90,9 +90,10 @@ function MoveParticipant(participantId) {
 }
 
 /*
-    Generate a random number between 1 and max.
-    @param {number} max - The max range number.
-    @returns {number} - The random number generated between 1 (included) and max (excluded).
+    Generate a random number between two numbers.
+    @param {number} min - The min (included) range number.
+    @param {number} max - The max (excluded) range number.
+    @returns {number} - The random number generated between min and max.
 */
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
